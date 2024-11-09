@@ -10,6 +10,7 @@ import {
   Trash,
 } from "lucide-react";
 import { useParams, usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import React, { ElementRef, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { useMutation } from "convex/react";
@@ -31,10 +32,12 @@ import { Item } from "./item";
 import { DocumentList } from "./document-list";
 import { TrashBox } from "./trash-box";
 import { Navbar } from "./navbar";
+import { Navbar } from "./navbar";
 
 export const Navigation = () => {
   const settings = useSettings();
   const search = useSearch();
+  const params = useParams();
   const params = useParams();
   const pathname = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
