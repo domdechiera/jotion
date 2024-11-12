@@ -36,7 +36,10 @@ import { Id } from "@/convex/_generated/dataModel";
             setFile(file);
 
             const res = await edgestore.publicFiles.upload({
-                file
+                file,
+                options: {
+                    replaceTargetUrl: coverImage.url,
+                }
             });
 
             await update({
