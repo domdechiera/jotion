@@ -9,8 +9,8 @@ import {
   Settings,
   Trash,
 } from "lucide-react";
-import { useParams, usePathname } from "next/navigation";
-import React, { ElementRef, useEffect, useRef, useState } from "react";
+import { useParams, usePathname, useRouter } from "next/navigation";
+import { ElementRef, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { useMutation } from "convex/react";
 import { toast } from "sonner";
@@ -31,8 +31,10 @@ import { Item } from "./item";
 import { DocumentList } from "./document-list";
 import { TrashBox } from "./trash-box";
 import { Navbar } from "./navbar";
+import { Router } from "next/router";
 
 export const Navigation = () => {
+  const router = useRouter();
   const settings = useSettings();
   const search = useSearch();
   const params = useParams();
@@ -125,7 +127,8 @@ export const Navigation = () => {
   };
 
   const handleCreate = () => {
-    const promise = create({ title: "Untitled" });
+    const promise = create({ title: "Untitled" })
+    .then((documentId) => router.push(`/documents/${documentId}`))
 
     toast.promise(promise, {
       loading: "Creating a new note...",

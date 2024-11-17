@@ -1,16 +1,15 @@
 "use client";
 
-import {
-  ChevronDown,
-  ChevronRight,
+import { 
+  ChevronDown, 
+  ChevronRight, 
   LucideIcon,
   MoreHorizontal,
   Plus,
-  Space,
-  Trash,
+  Trash
 } from "lucide-react";
 import { useMutation } from "convex/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { useUser } from "@clerk/clerk-react";
 
@@ -52,7 +51,7 @@ export const Item = ({
   expanded,
 }: ItemProps) => {
   const { user } = useUser();
-  const router = useRouter;
+  const router = useRouter();
   const create = useMutation(api.documents.create);
   const archive = useMutation(api.documents.archive);
 
@@ -62,7 +61,7 @@ export const Item = ({
     event.stopPropagation();
     if (!id) return;
     const promise = archive({ id })
-      // .then(() => router.push("/documents"));
+      .then(() => router.push("/documents"))
 
     toast.promise(promise, {
       loading: "Moving to trash...",
@@ -88,13 +87,13 @@ export const Item = ({
         if (!expanded) {
           onExpand?.();
         }
-        // router.push(`/documents/${documentId}`);
+        router.push(`/documents/${documentId}`);
       });
 
     toast.promise(promise, {
       loading: "Creating a new note...",
       success: "New note created!",
-      error: "Failed to create a note."
+      error: "Failed to create a new note."
     });
   };
 
@@ -104,7 +103,7 @@ export const Item = ({
     <div
       onClick={onClick}
       role="button"
-      style={{
+      style={{ 
         paddingLeft: level ? `${(level * 12) + 12}px` : "12px"
       }}
       className={cn(
@@ -118,18 +117,18 @@ export const Item = ({
           className="h-full rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 mr-1"
           onClick={handleExpand}
         >
-          <ChevronIcon 
+          <ChevronIcon
             className="h-4 w-4 shrink-0 text-muted-foreground/50"
           />
         </div>
       )}
       {documentIcon ? (
         <div className="shrink-0 mr-2 text-[18px]">
-            {documentIcon}
-          </div>
+          {documentIcon}
+        </div>
       ) : (
         <Icon 
-          className="shrink-0 h-[18px] w-[18px] mr-2 text-muted-foreground" 
+          className="shrink-0 h-[18px] w-[18px] mr-2 text-muted-foreground"
         />
       )}
       <span className="truncate">
@@ -154,7 +153,7 @@ export const Item = ({
                 <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
               </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent 
+            <DropdownMenuContent
               className="w-60"
               align="start"
               side="right"
@@ -180,8 +179,8 @@ export const Item = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
 Item.Skeleton = function ItemSkeleton({ level }: { level?: number }) {
   return (
@@ -194,5 +193,5 @@ Item.Skeleton = function ItemSkeleton({ level }: { level?: number }) {
       <Skeleton className="h-4 w-4" />
       <Skeleton className="h-4 w-[30%]" />
     </div>
-  );
-};
+  )
+}
