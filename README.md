@@ -2,15 +2,28 @@
 
 ## A fullstack Notion clone.
 
-**Landing Page (Light mode):**![](jotion-landing-screenshot_light.png)
+**Landing Page (Light mode):**![Landing Page (Light mode)](jotion-landing-screenshot_light.png)
 
-**Landing Page (Dark mode):**![](jotion-landing-screenshot_dark.png)
+**Landing Page (Dark mode):**![Landing Page (Dark mode)](jotion-landing-screenshot_dark.png)
 
-**Application (Light Mode):**![](jotion-screenshot_light.png)
+**Application (Light Mode):**![Application (Light Mode)](jotion-screenshot_light.png)
 
-**Application (Dark mode):**![](jotion-screenshot_dark.png)
+**Application (Dark mode):**![Application (Dark mode)](jotion-screenshot_dark.png)
 
-***Live demo:*** [https://jotion-nu-five.vercel.app/](https://jotion-nu-five.vercel.app/)
+***Key Features:***
+
+- Real-time editor 📝 
+- Light and Dark mode 🌓
+- Infinite child documents 🌲
+- Trash bin & soft delete 🗑️
+- File upload and replacement 🗃️
+- Optional emojis for each document 🌠
+- Optional cover image for notes 🖼️
+- Expandable sidebar ➡️|⬅️
+- Fully mobile responsive 📱
+- Publish and share your note on the web 🌐
+- Professional Landing page 🛬
+- Restore deleted (archived) files 🔄📄
 
 ## Getting Started
 
@@ -28,11 +41,14 @@
    npm install
    ```
 
-4. Rename `.env-example` to `.env` and fill in your API keys:
+3. Rename `.env-example` to `.env` and fill in your API keys:
 
    ```bash
    # Deployment used by `npx convex dev`
    CONVEX_DEPLOYMENT=
+   
+   # Production
+   CONVEX_DEPLOY_KEY=
    
    NEXT_PUBLIC_CONVEX_URL=
    
@@ -77,7 +93,7 @@ This project utilises the following third-party tools:
 
 The easiest way to deploy this app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ---
 
