@@ -33,7 +33,7 @@ export const Navbar = () => {
                             </Button>
                         </SignInButton>
                         <SignInButton mode="modal">
-                            <Button variant="ghost" size="sm">
+                            <Button size="sm">
                                 Get Jotion Free
                             </Button>
                         </SignInButton>
