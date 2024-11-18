@@ -2,13 +2,13 @@
 
 ## A fullstack Notion clone.
 
-**Landing Page (Light mode):**![](/home/dom/Projects/jotion/jotion-landing-screenshot_light.png)
+**Landing Page (Light mode):**![](jotion-landing-screenshot_light.png)
 
-**Landing Page (Dark mode):**![](/home/dom/Projects/jotion/jotion-landing-screenshot_dark.png)
+**Landing Page (Dark mode):**![](jotion-landing-screenshot_dark.png)
 
-**Application (Light Mode):**![](/home/dom/Projects/jotion/jotion-screenshot_light.png)
+**Application (Light Mode):**![](jotion-screenshot_light.png)
 
-**Application (Dark mode):**![](/home/dom/Projects/jotion/jotion-screenshot_dark.png)
+**Application (Dark mode):**![](jotion-screenshot_dark.png)
 
 ## Getting Started
 
