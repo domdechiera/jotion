@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ![](/home/dom/Projects/jotion/jotion-logo.png) Jotion
+
+## A fullstack Notion clone.
+
+**Landing Page (Light mode):**![](/home/dom/Projects/jotion/jotion-landing-screenshot_light.png)
+
+**Landing Page (Dark mode):**![](/home/dom/Projects/jotion/jotion-landing-screenshot_dark.png)
+
+**Application (Light Mode):**![](/home/dom/Projects/jotion/jotion-screenshot_light.png)
+
+**Application (Dark mode):**![](/home/dom/Projects/jotion/jotion-screenshot_dark.png)
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone git@github.com:domdechiera/jotion.git
+   ```
+
+   
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Rename `.env-example` to `.env` and fill in your API keys:
+
+   ```bash
+   # Deployment used by `npx convex dev`
+   CONVEX_DEPLOYMENT=
+   
+   NEXT_PUBLIC_CONVEX_URL=
+   
+   # Clerk
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+   CLERK_SECRET_KEY=
+   
+   # Edgestore
+   EDGE_STORE_ACCESS_KEY=
+   EDGE_STORE_SECRET_KEY=
+   ```
+
+5. Run Convex development server:
+
+   ```bash
+   npx convex dev
+   ```
+
+6. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## The Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Learn More
+This project utilises the following third-party tools:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types.
+- [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
+- [shadcn/ui](https://ui.shadcn.com/) - Beautifully designed components that you can copy and paste into your apps.
+- [Lucide](https://lucide.dev/) - Beautiful and consistent icons.
+- [Vercel](https://vercel.com) -  Build, scale, and secure a faster, more personalised web.
+- [Clerk](https://clerk.com) - Authentication and user management.
+- [Convex](https://convex.dev) - A fullstack TypeScript development platform.
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy this app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+---
+
+Looking to learn how to code? Check out [Code with Antonio](https://www.codewithantonio.com/).
