@@ -1,4 +1,4 @@
-# ![](/home/dom/Projects/jotion/jotion-logo.png) Jotion
+# ![](jotion-logo.png) Jotion
 
 ## A fullstack Notion clone.
 
