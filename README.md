@@ -17,13 +17,13 @@
 - Infinite child documents 🌲
 - Trash bin & soft delete 🗑️
 - File upload and replacement 🗃️
-- Optional emojis for each document 🌠
-- Optional cover image for notes 🖼️
+- Optional emojis for document title 🌠
+- Optional cover image for documents 🖼️
 - Expandable sidebar ➡️|⬅️
-- Fully mobile responsive 📱
 - Publish and share your note on the web 🌐
 - Professional Landing page 🛬
 - Restore deleted (archived) files 🔄📄
+- Fully mobile responsive 📱
 
 ## Getting Started
 
