@@ -10,8 +10,6 @@
 
 **Application (Dark mode):**![Application (Dark mode)](jotion-screenshot_dark.png)
 
-**Live Demo:** [https://jotion-nu-five.vercel.app/](https://jotion-nu-five.vercel.app/)
-
 ***Key Features:***
 
 - Real-time editor 📝 
